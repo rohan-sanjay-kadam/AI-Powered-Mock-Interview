@@ -73,7 +73,7 @@
           <div class="mt-8 space-y-6">
             <!-- Social Sign In -->
             <div class="grid grid-cols-2 gap-3">
-              <button
+              <button onclick="loginWithGoogle()"
                 class="flex items-center justify-center gap-2 h-11 px-5 border border-white/10 rounded-lg bg-white/5 hover:bg-[#10b981]/20 transition-colors"
               >
                 <svg
@@ -132,7 +132,7 @@
             </div>
 
             <!-- Sign In Form -->
-            <form class="space-y-4">
+            <form onsubmit="loginWithEmail(event)" class="space-y-4">
               <div>
                 <label
                   for="email"
@@ -154,7 +154,7 @@
                 >
                 <input
                   type="password"
-                  id="password"
+                  id="password" 
                   class="w-full h-11 px-4 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#10b981] focus:border-transparent outline-none transition-all"
                 />
               </div>
@@ -182,11 +182,15 @@
 
             <p class="text-center text-sm text-white/60">
               Don’t have an account?
-              <a href="sign_up2.html" class="text-[#10b981] hover:underline">Sign up</a>
+              <a href="/signup" class="text-[#10b981] hover:underline">Sign up</a>
             </p>
           </div>
         </div>
       </div>
     </div>
+
+<script type="module" src="{{ url_for('static', filename='auth.js') }}"></script>
+
+
   </body>
 </html>

@@ -73,7 +73,7 @@
           <div class="mt-8 space-y-6">
             <!-- Social Sign Up Options -->
             <div class="grid grid-cols-2 gap-3">
-         <button
+         <button onclick="signupWithGoogle()"
                 class="flex items-center justify-center gap-2 h-11 px-5 border border-white/10 rounded-lg bg-white/5 hover:bg-[#10b981]/20 transition-colors"
               >
                 <svg
@@ -132,7 +132,7 @@
             </div>
 
             <!-- Sign Up Form -->
-            <form class="space-y-4">
+            <form id="signup-form" class="space-y-4">
               <div class="grid grid-cols-2 gap-4">
                 <div>
                   <label
@@ -217,11 +217,14 @@
 
             <p class="text-center text-sm text-white/60">
               Already have an account?
-              <a href="sign_in.html" class="text-[#10b981] hover:underline">Sign in</a>
+              <a href="/login" class="text-[#10b981] hover:underline">Sign in</a>
             </p>
           </div>
         </div>
       </div>
     </div>
+
+<script type="module" src="{{ url_for('static', filename='auth.js') }}"></script>
+
   </body>
 </html>
